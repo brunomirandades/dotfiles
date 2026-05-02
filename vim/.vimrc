@@ -52,3 +52,7 @@ autocmd FileType go setlocal shiftwidth=4 softtabstop=4
 autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2
 autocmd FileType sh setlocal shiftwidth=2 softtabstop=2
 autocmd FileType html setlocal shiftwidth=2 softtabstop=2
+
+" Files navigation support
+inoremap <c-b> <Esc>:Lex<cr>:vertical resize 30<cr>
+nnoremap <c-b> <Esc>:Lex<cr>:vertical resize 30<cr>
