@@ -11,6 +11,23 @@ set cursorline
 highlight CursorLine cterm=NONE ctermbg=236 guibg=#2f334d
 highlight CursorLineNr cterm=NONE gui=bold guifg=#7aa2f7
 
+" Disabling line highlight in Insert Mode
+autocmd InsertEnter * set nocursorline
+autocmd InsertLeave * set cursorline
+
+" Leader the Leader key to the space bar
+let mapleader = "\<Space>"
+
+" Set save action to Space+w
+nnoremap <Leader>w :w<cr>
+
+" Set quit action to Space+q
+nnoremap <Leader>q :q<cr>
+
+" Set/Unset the 80 char column limiter reference
+nnoremap <Leader>cc :set colorcolumn=80<cr>
+nnoremap <Leader>ncc :set colorcolumn-=80<cr>
+
 " Cursor behavior (alacritty was overriding vim's cursor normal behavior -
 " this corrects it)
 let s:ti = &t_ti
@@ -26,6 +43,7 @@ set number
 
 " Enable syntax highlighting
 syntax enable
+syntax on
 
 " Enable filetype detection
 filetype plugin indent on
@@ -33,6 +51,7 @@ filetype plugin indent on
 " Set tabs and spaces for coding
 set tabstop=4
 set shiftwidth=4
+set softtabstop=4
 set expandtab
 
 " Enable line wrapping
@@ -58,5 +77,5 @@ autocmd FileType sh setlocal shiftwidth=2 softtabstop=2
 autocmd FileType html setlocal shiftwidth=2 softtabstop=2
 
 " Files navigation support
-inoremap <c-b> <Esc>:Lex<cr>:vertical resize 30<cr>
-nnoremap <c-b> <Esc>:Lex<cr>:vertical resize 30<cr>
+inoremap <Leader>b <esc>:Lex<cr>:vertical resize 30<cr>
+nnoremap <Leader>b <esc>:Lex<cr>:vertical resize 30<cr>
