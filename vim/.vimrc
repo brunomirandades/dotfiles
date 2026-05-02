@@ -28,6 +28,9 @@ nnoremap <Leader>q :q<cr>
 nnoremap <Leader>cc :set colorcolumn=80<cr>
 nnoremap <Leader>ncc :set colorcolumn-=80<cr>
 
+" Enable terminal with Space+t
+nnoremap <Leader>t :term<cr>
+
 " Cursor behavior (alacritty was overriding vim's cursor normal behavior -
 " this corrects it)
 let s:ti = &t_ti
