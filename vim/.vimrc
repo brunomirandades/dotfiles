@@ -7,6 +7,10 @@ set mouse=a
 " Highlight the current line
 set cursorline
 
+" Disable the underline and set a soft, themed background
+highlight CursorLine cterm=NONE ctermbg=236 guibg=#2f334d
+highlight CursorLineNr cterm=NONE gui=bold guifg=#7aa2f7
+
 " Cursor behavior (alacritty was overriding vim's cursor normal behavior -
 " this corrects it)
 let s:ti = &t_ti
