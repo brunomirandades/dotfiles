@@ -40,6 +40,7 @@ let &t_te = s:te . "\e[6 q"   " beam on exit
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 let &t_SR = "\e[4 q"
+let &t_SR = "\<Esc>[3 q"
 
 " Enable line numbers
 set number
