@@ -82,3 +82,6 @@ autocmd FileType html setlocal shiftwidth=2 softtabstop=2
 
 " Files navigation support Space+f
 nnoremap <Leader>f <esc>:Lex<cr>:vertical resize 30<cr>
+
+" Clear search highlight with clear screen command <C-l>
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
